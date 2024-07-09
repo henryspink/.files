@@ -1,0 +1,26 @@
+// @font-face {
+//     font-family: 'Google Sans';
+//     src: url('/usr/share/fonts/GoogleSans-Regular.ttf');
+// }
+
+* {
+    all: unset; //Unsets everything so you can style everything from scratch
+  }
+
+.clock {
+    font-family: 'Google Sans';
+    font-family: '';
+}
+
+.time {
+    font-size: 150pt;
+    color: white;
+}
+.date {
+    font-size: 50pt;
+    color: white;
+}
+.seconds {
+    font-size: 50pt;
+    color: white;
+}

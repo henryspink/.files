@@ -1,0 +1,91 @@
+
+(defpoll hour :interval "1s" "date +'%I'")
+(defpoll minute :interval "1s" "date +'%M'")
+(defpoll second :interval "1s" "date +'%S'")
+(defpoll day :interval "1s" "date +'%A'")
+(defpoll month :interval "1s" "date +'%B'")
+(defpoll date :interval "1s" "date +'%d'")
+(defpoll year :interval "1s" "date +'%Y'")
+
+(defwidget clock []
+    (box :class "clock" :orientation "v" :spacing -50 :space-evenly false
+        (time)
+        (date)
+    )
+)
+
+(defwidget time [] 
+	(box
+        :class "time"
+        :orientation "h"
+        :spacing 10
+        :space-evenly false
+        (label :text hour)
+        (label :text ":")
+        (label :text minute)
+        (box
+            :class "seconds"
+            :orientation "h"
+            :spacing 0
+            :space-evenly false
+            (label :text second :yalign 0.75)
+        )
+    )
+)
+(defwidget date []
+    (box
+        :class "date"
+        :orientation "h"
+        :spacing 0
+        :space-evenly true
+        (label :text "${day}, ${month} ${date}, ${year}")
+    )
+)
+  
+(defwindow clockone
+    :monitor 0
+    :namespace "eww-clock"
+    :exclusive false
+    :stacking "bg"
+    :focusable false
+    :geometry (geometry 
+        :x "100"
+        :y "200"
+        :width "1"
+        :height "1"
+        :anchor "top left"
+    )
+    (clock)
+)
+
+(defwindow clocktwo
+    :monitor 1
+    :namespace "eww-clock"
+    :exclusive false
+    :stacking "bg"
+    :focusable false
+    :geometry (geometry 
+        :x "100"
+        :y "200"
+        :width "1"
+        :height "1"
+        :anchor "top left"
+    )
+    (clock)
+)
+
+(defwindow clockthree
+    :monitor 2
+    :namespace "eww-clock"
+    :exclusive false
+    :stacking "bg"
+    :focusable false
+    :geometry (geometry 
+        :x "100"
+        :y "200"
+        :width "1"
+        :height "1"
+        :anchor "top left"
+    )
+    (clock)
+)
