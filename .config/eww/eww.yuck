@@ -1,4 +1,4 @@
-
+; pollers
 (defpoll hour :interval "1s" "date +'%I'")
 (defpoll minute :interval "1s" "date +'%M'")
 (defpoll second :interval "1s" "date +'%S'")
@@ -6,6 +6,38 @@
 (defpoll month :interval "1s" "date +'%B'")
 (defpoll date :interval "1s" "date +'%d'")
 (defpoll year :interval "1s" "date +'%Y'")
+
+;system info
+(defwidget cpu_usage []
+    (box
+        :class "cpu"
+        :orientation "h"
+        :spacing 10
+        :space-evenly false
+        (label :text "CPU")
+        (label :text "${EWW_CPU['avg']}%")
+        (progress :value "${EWW_CPU['avg']}" :orientation "h" :style "color: red")
+    )
+
+)
+
+(defwindow system_info_one
+    :monitor 0
+    :namespace "eww-system"
+    :exclusive false
+    :stacking "bg"
+    :focusable false
+    :geometry (geometry 
+        :x "50"
+        :y "150"
+        :width "1"
+        :height "1"
+        :anchor "top left"
+    )
+    (cpu_usage)
+)
+
+; clock
 
 (defwidget clock []
     (box :class "clock" :orientation "v" :spacing -50 :space-evenly false
@@ -38,6 +70,7 @@
         :orientation "h"
         :spacing 0
         :space-evenly true
+        ; :yalign 0.5
         (label :text "${day}, ${month} ${date}, ${year}")
     )
 )
@@ -49,8 +82,8 @@
     :stacking "bg"
     :focusable false
     :geometry (geometry 
-        :x "100"
-        :y "200"
+        :x "50"
+        :y "150"
         :width "1"
         :height "1"
         :anchor "top left"
@@ -65,8 +98,8 @@
     :stacking "bg"
     :focusable false
     :geometry (geometry 
-        :x "100"
-        :y "200"
+        :x "50"
+        :y "150"
         :width "1"
         :height "1"
         :anchor "top left"
@@ -81,8 +114,8 @@
     :stacking "bg"
     :focusable false
     :geometry (geometry 
-        :x "100"
-        :y "200"
+        :x "50"
+        :y "150"
         :width "1"
         :height "1"
         :anchor "top left"

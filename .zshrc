@@ -105,6 +105,12 @@ source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
 alias pac="sudo pacman -S"
 eval "$(zoxide init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/omp.json)"
+
+
+hyprconf() {
+	nvim ~/.files/.config/hypr/$1.conf;
+}
 
 LAST_REPO=""
 
@@ -152,3 +158,16 @@ function __zoxide_z() {
 
 my_chpwd_hook() la
 chpwd_functions+=( my_chpwd_hook )
+
+mkd() {
+    if [ -n "$1" ]
+    then
+        mkdir "$1"
+	z "$1"
+    else
+        echo "Must provide argument"
+    fi
+}
+
+eval $(thefuck --alias)
+neofetch
