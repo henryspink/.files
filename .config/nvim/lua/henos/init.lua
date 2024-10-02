@@ -1,6 +1,7 @@
 require("henos.remaps")
 require("henos.colours")
 require("henos.plugins")
+require("henos.netrw")
 
 vim.wo.number = true
 vim.wo.relativenumber = true

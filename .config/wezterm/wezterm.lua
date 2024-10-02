@@ -8,5 +8,6 @@ config.font = wezterm.font('Hack Nerd Font Mono')
 config.color_scheme = 'Tomorrow (dark) (terminal.sexy)'
 config.hide_tab_bar_if_only_one_tab = false
 config.default_prog = {'C:/Program Files/Git/bin/bash.exe', '-i', '-l'}
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 keys.apply_to_config(config)
 return config
