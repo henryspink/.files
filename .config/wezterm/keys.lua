@@ -6,7 +6,7 @@ local module = {}
 function module.apply_to_config(config)
     config.keys = {
         { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
-        { key = 'F12', mods = 'SHIFT|CTRL', action = act.DisableDefaultAssignment },
+        { key = 'F12', mods = 'ALT|CTRL', action = act.DisableDefaultAssignment },
         -- { key = ';7~', mods = 'NONE', action = act.DisableDefaultAssignment },
         { key = 'Tab', mods = 'SHIFT|CTRL', action = act.ActivateTabRelative(-1) },
         { key = 'Enter', mods = 'ALT', action = act.ToggleFullScreen },
