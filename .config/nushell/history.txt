@@ -244,3 +244,11 @@ cat config
 cd ..
 cd .files
 git status
+git acp "nushell"
+git pull
+ssh henos@168.138.14.88
+la
+ls -la
+ssh henos@168.138.14.88
+cd .files
+git pull
