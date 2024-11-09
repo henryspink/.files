@@ -244,3 +244,42 @@ cat config
 cd ..
 cd .files
 git status
+exit
+chsh
+cat /etc/shells
+sudo vim /etc/shells
+exit
+hi
+cd .files
+cd
+la
+ls -la
+la
+which la
+$(la)
+cd .files/.config/nushell
+nvim config.nu
+la
+cd
+la
+ls
+exit
+la
+cd /usr/share
+cd
+exit
+cd .files
+cd .config
+cd nushell
+la
+nvim config.nu
+exit
+cd .files
+git status
+cd .config/nushell/
+nvim config.nu
+exit
+la
+cd .files
+git status
+git acp "nu la vs ls"
