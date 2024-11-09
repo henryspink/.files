@@ -298,7 +298,7 @@ $env.config = {
             PWD: [
                 {
                     condition: {|before, after| ($before | describe) != 'nothing' }
-                    code: {print (ls | table)}
+                    code: {print (ls -la | table)}
                 }
                 # {|before, after| print $"($before) -> ($after)"}
             ] # run if the PWD environment is different since the last repl input
@@ -904,6 +904,6 @@ $env.config = {
 }
 
 
-alias la = ls
+alias la = ls -la
 def --env mkd [dir] {mkdir $dir; cd $dir}
 # alias mkd = mkdcd
