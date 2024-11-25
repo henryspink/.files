@@ -217,7 +217,7 @@ keybindings:
 
   # Close focused window.
   - commands: ['close']
-    bindings: ['ctrl+alt+f12+shift+q']
+    bindings: ['ctrl+alt+f12+w']
  
   # Kill GlazeWM process safely.
   - commands: ['wm-exit', 'shell-exec TASKKILL /F /IM zebar.exe /T']
@@ -318,3 +318,5 @@ keybindings:
     bindings: ["ctrl+alt+f12+oem_comma"]
   - commands: ["shell-exec nircmd monitor on"]
     bindings: ["ctrl+alt+f12+oem_period"]
+  - commands: ["shell-exec wezterm-gui"]
+    bindings: ["ctrl+alt+f12+q"]

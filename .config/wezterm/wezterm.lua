@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local keys = require 'keys'
 
 local config = wezterm.config_builder()
-print('hi')
+-- print('hi')
 config.font = wezterm.font('Hack Nerd Font Mono')
 --config.color_scheme = 'Kanagawa Dragon (Gogh)'
 config.color_scheme = 'Tomorrow (dark) (terminal.sexy)'
